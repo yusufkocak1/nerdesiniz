@@ -18,7 +18,9 @@ Temelde uygulamada iki adet ekran bulunmaktadır: Giriş Ekranı ve Harita Ekran
 
 Bu ekran uygulama launch edildiğinde ilk açılacak ekrandır. İsim ve oda numarası girilir ve renk seçilir. Giriş Yap butonuna basıldığında kullanıcı harita ekranına geçer.
 
-Giriş ekranındaki arka plan rengi kullanıcının seçtiği renk ile değişir.
+Giriş ekranındaki arka plan rengi ve button rengi kullanıcının seçtiği renk ile değişir.
+
+Renk seçimleri sırasında projede material renk paleti kullanılmıştır. Tasarımla implementasyon arasında küçük değişiklikler  olabilir.
 
 #### Harita Ekranı
 
