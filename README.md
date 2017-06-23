@@ -2,6 +2,8 @@
 
 Nerdesiniz uygulaması bir çok kullanıcının bir sanal odada buluşup, konumlarını gerçek zamanlı olarak birbirleriyle paylaşabilecekleri bir uygulamadır.
 
+Bu proje [bilgetech](http://bilgetech.com.tr) Android takımına işe alım sürecinde kullanılacak challenge olarak oluşturulmuştur.
+
 Bu repo'yu fork'layıp aşağıdaki spesifikasyonları da gözeterek Nerdesiniz uygulamasını geliştirmeniz beklenmektedir.
 
 ### Ekranlar
