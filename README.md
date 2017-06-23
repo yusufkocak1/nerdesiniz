@@ -8,7 +8,7 @@ Bu repo'yu fork'layıp aşağıdaki spesifikasyonları da gözeterek Nerdesiniz 
 
 ### Ekranlar
 
-Temelde uygulamada iki adet ekran bulunmaktadır: Giriş Ekranı ve Harita Ekranı
+Temelde uygulamada iki adet ekran bulunmaktadır: Giriş Ekranı ve Harita Ekranı. Ekranları bu tasarımları göz önünde bulundururarak yapabilirsiniz ama önemli olan birebir bu tasarımlara benzemesi değil iyi ve temiz yazılmış olması, iyi çalışması ve güzel bi kullanıcı deneyimi sunmasıdır.
 
 ![giris ekrani](https://user-images.githubusercontent.com/4990386/27486868-a5f3d93e-583a-11e7-808d-4621de7cc096.png)
 ![harita ekrani](https://user-images.githubusercontent.com/4990386/27486869-a6122074-583a-11e7-9553-e47d1578071e.png)
