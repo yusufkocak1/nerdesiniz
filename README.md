@@ -44,3 +44,4 @@ Bu class, konum güncellemeleri alma, konum izni yönetimi ve benzeri konum serv
 
 **İpucu**: Bu sınıf child class'larına `getLocationUpdates()` adlı bir fonksiyon sunarak, child class'ların kolay bir şekilde konum update'leri alabilmesini sağlar.
 
+**İpucu**: Konum servisleri, izinler, UI elemanları ve diğer her şey için 3. parti kütüphaneler kullanılabilir.
