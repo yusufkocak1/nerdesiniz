@@ -1,3 +1,10 @@
 <resources>
-    <string name="app_name">Nerdesiniz</string>
+    <string name="app_name">Neredesiniz</string>
+
+    <string name="app_name_tv">Neredesiniz?</string>
+    <string name="name_hint_et">İsim</string>
+    <string name="room_hint_et">Oda</string>
+    <string name="login_text_btn">Giriş yap</string>
+    <string name="change_color">Renk Seçiniz</string>
+    <string name="title_activity_map">Map</string>
 </resources>
