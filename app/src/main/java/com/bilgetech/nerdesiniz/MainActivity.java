@@ -44,13 +44,14 @@ public class MainActivity extends AppCompatActivity {
 
         RadioGroup radioGroup = (RadioGroup) findViewById(R.id.loginRG);
 
-
+        final String[] color = {""};
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(MainActivity.this,MapActivity.class);
-                intent.putExtra("name",nameEt.getText());
-                intent.putExtra("room",roomEt.getText());
+                intent.putExtra("name",nameEt.getText().toString());
+                intent.putExtra("room",roomEt.getText().toString());
+                intent.putExtra("color", color[0].toString());
                 startActivity(intent);
             }
         });
@@ -65,11 +66,13 @@ public class MainActivity extends AppCompatActivity {
                         layout.setBackgroundDrawable(ContextCompat.getDrawable(getApplicationContext(), R.color.yellow) );
                         loginBtn.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.color.yellow) );
                         editor.putString("color","yellow");
+                        color[0] ="yellow";
                         editor.commit();
                         break;
                     case R.id.greenRb:
                         layout.setBackgroundDrawable(ContextCompat.getDrawable(getApplicationContext(), R.color.green) );
                         loginBtn.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.color.green) );
+                        color[0] ="green";
                         editor.putString("color","green");
                         editor.commit();
                         break;
@@ -77,12 +80,14 @@ public class MainActivity extends AppCompatActivity {
                         layout.setBackgroundDrawable(ContextCompat.getDrawable(getApplicationContext(), R.color.red) );
                         loginBtn.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.color.red) );
                         editor.putString("color","red");
+                        color[0] ="red";
                         editor.commit();
                         break;
                     case R.id.blueRb:
                         layout.setBackgroundDrawable(ContextCompat.getDrawable(getApplicationContext(), R.color.blue) );
                         loginBtn.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.color.blue) );
                         editor.putString("color","blue");
+                        color[0] ="blue";
                         editor.commit();
 
 

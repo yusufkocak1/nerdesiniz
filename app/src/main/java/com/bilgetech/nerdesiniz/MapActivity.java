@@ -2,14 +2,18 @@ package com.bilgetech.nerdesiniz;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
+import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.location.Location;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -38,7 +42,10 @@ public class MapActivity extends LocationAwareActivity implements OnMapReadyCall
     private String name;
     private String id;
     private ArrayList<Person> personlist=new ArrayList<>();
+ImageView colorIV;
+TextView nameTV;
 
+    @android.support.annotation.RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,11 +53,32 @@ public class MapActivity extends LocationAwareActivity implements OnMapReadyCall
 
         runtimePermssion();
 
-        room_id = getIntent().getExtras().getString("room", "-1");
-        name = getIntent().getExtras().getString("name", "-1");
+        colorIV=(ImageView) findViewById(R.id.ivUserColor);
+        nameTV =(TextView) findViewById(R.id.tvUserName);
+        room_id = getIntent().getStringExtra("room");
+        name = getIntent().getStringExtra("name");
+        color = getIntent().getStringExtra("color");
 
-        SharedPreferences preferences = this.getPreferences(Context.MODE_PRIVATE);
-        color = preferences.getString("color", "red");
+        nameTV.setText(name);
+        switch (color) {
+            case "red":
+                colorIV.setBackgroundDrawable(ContextCompat.getDrawable(getApplicationContext(), R.color.red));
+
+                break;
+            case "yellow":
+                colorIV.setBackgroundDrawable(ContextCompat.getDrawable(getApplicationContext(), R.color.yellow));
+
+                break;
+            case "green":
+                colorIV.setBackgroundDrawable(ContextCompat.getDrawable(getApplicationContext(), R.color.green));
+
+                break;
+            case "blue":
+                colorIV.setBackgroundDrawable(ContextCompat.getDrawable(getApplicationContext(), R.color.blue));
+
+        }
+
+
 
 
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
@@ -71,7 +99,7 @@ public class MapActivity extends LocationAwareActivity implements OnMapReadyCall
                     public void run() {
 
 
-                        new firebase().updateData(new Person(id,room_id,name,color,location));
+                     //   new firebase().updateData(new Person(id,room_id,name,color,location));
                         addMarker(new firebase().selectData(room_id),mMap);
                     }
                 });
